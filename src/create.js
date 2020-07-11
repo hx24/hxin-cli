@@ -21,11 +21,11 @@ render = promisify(render)
 
 // api文档使用方式：
 // 1.要查询仓库(repositories)，搜索repositories点击右边的导航
-// 2.我们的模板都放在hx-cli的组织里，搜索org:  GET /orgs/:org/repos
-// 于是 https://api.github.com/orgs/hx-cli/repos 便可以拿到hx-cli下的所有仓库；
+// 2.我们的模板都放在hxin-cli的组织里，搜索org:  GET /orgs/:org/repos
+// 于是 https://api.github.com/orgs/hxin-cli/repos 便可以拿到hxin-cli下的所有仓库；
 
 // /repos/:org/:repo/tags 取仓库对应的的版本号(tag)列表
-// 如https://api.github.com/repos/hx-cli/react/tags
+// 如https://api.github.com/repos/hxin-cli/react/tags
 // 关于tag的操作：https://www.jianshu.com/p/cdd80dd15593
 
 // 选完后，显示所有的版本号
@@ -33,18 +33,18 @@ render = promisify(render)
 
 // 1）获取项目列表
 const fetchRepoLis = async () => {
-  const { data } = await axios.get('https://api.github.com/orgs/hx-cli/repos')
+  const { data } = await axios.get('https://api.github.com/orgs/hxin-cli/repos')
   return data
 }
 
 // 2）获取tag列表
 const fetchTagLis = async (repo) => {
-  const { data } = await axios.get(`https://api.github.com/repos/hx-cli/${repo}/tags`)
+  const { data } = await axios.get(`https://api.github.com/repos/hxin-cli/${repo}/tags`)
   return data
 }
 
 const downloadRepo = async (repo, tag) => {
-  let api = `hx-cli/${repo}`
+  let api = `hxin-cli/${repo}`
   if (tag) {
     api += `#${tag}`
   }
@@ -127,6 +127,7 @@ module.exports = async (projectName) => {
           const result = await Inquirer.prompt(args)
           const meta = metal.metadata() // 这个函数返回的meta可以传给下一级中间件的
           Object.assign(meta, result) // 通过metal将用户选择的结果传给下一个中间件
+          delete files['ask.js']
           done()
         })
         .use((files, metal, done) => {

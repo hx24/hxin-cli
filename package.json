@@ -1,15 +1,15 @@
 {
-  "name": "hx-cli",
+  "name": "hxin-cli",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "bin": {
-    "hx-cli": "./bin/www.js"
+    "hxin-cli": "./bin/www"
   },
-  "homepage": "https://github.com/hx24/hx-cli",
+  "homepage": "https://github.com/hx24/hxin-cli",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hx24/hx-cli"
+    "url": "https://github.com/hx24/hxin-cli"
   },
   "keywords": [
     "cli",

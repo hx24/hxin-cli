@@ -18,12 +18,12 @@ const mapActions = {
   create: {
     alias: 'c',
     description: 'create a project',
-    examples: ['hx-cli create <project-name>'],
+    examples: ['hxin-cli create <project-name>'],
   },
   config: {
     alias: 'conf',
     description: 'config project variable',
-    examples: ['hx-cli config set <k> <v>', 'hx-cli config get <k> <v>'],
+    examples: ['hxin-cli config set <k> <v>', 'hxin-cli config get <k> <v>'],
   },
   '*': {
     alias: '',

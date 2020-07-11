@@ -25,7 +25,7 @@ render = promisify(render)
 // 于是 https://api.github.com/orgs/hxin-cli/repos 便可以拿到hxin-cli下的所有仓库；
 
 // /repos/:org/:repo/tags 取仓库对应的的版本号(tag)列表
-// 如https://api.github.com/repos/hxin-cli/react/tags
+// 如https://api.github.com/repos/hxin-cli/react-simple-template/tags
 // 关于tag的操作：https://www.jianshu.com/p/cdd80dd15593
 
 // 选完后，显示所有的版本号

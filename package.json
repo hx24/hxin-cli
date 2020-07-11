@@ -11,6 +11,12 @@
     "type": "git",
     "url": "https://github.com/hx24/hx-cli"
   },
+  "keywords": [
+    "cli",
+    "vue",
+    "react",
+    "express"
+  ],
   "dependencies": {
     "axios": "^0.19.2",
     "commander": "^5.1.0",
